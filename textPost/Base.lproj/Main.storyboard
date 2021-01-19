@@ -53,13 +53,19 @@
                                 <rect key="frame" x="191" y="551" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqE-Uc-5iU">
+                                <rect key="frame" x="354" y="44" width="29" height="31"/>
+                                <state key="normal" title=" " image="multiply.circle.fill" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="h2U-tb-deI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="191" id="0kS-vv-d7Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6PB-rk-Qmn" secondAttribute="trailing" constant="346" id="0xC-eb-67v"/>
+                            <constraint firstItem="QqE-Uc-5iU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="25l-sK-uJe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6ny-4H-4HQ" secondAttribute="trailing" constant="350" id="2hQ-Ao-Sbe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QqE-Uc-5iU" secondAttribute="bottom" constant="787" id="3WD-zo-0Ft"/>
                             <constraint firstItem="SyY-sX-bqn" firstAttribute="top" secondItem="6ny-4H-4HQ" secondAttribute="bottom" constant="15" id="4u2-w4-m5t"/>
                             <constraint firstItem="40e-aU-Ky7" firstAttribute="top" secondItem="w3N-Fh-7g9" secondAttribute="bottom" constant="15" id="7ro-cd-ayX"/>
                             <constraint firstItem="40e-aU-Ky7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="BeU-q4-eLo"/>
@@ -70,6 +76,7 @@
                             <constraint firstItem="3XX-rJ-phq" firstAttribute="top" secondItem="6PB-rk-Qmn" secondAttribute="bottom" constant="15" id="JGi-Gy-UWK"/>
                             <constraint firstItem="w3N-Fh-7g9" firstAttribute="top" secondItem="SyY-sX-bqn" secondAttribute="bottom" constant="35" id="Mvt-wc-hTH"/>
                             <constraint firstItem="6ny-4H-4HQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="139" id="TxQ-ew-StS"/>
+                            <constraint firstItem="QqE-Uc-5iU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="354" id="UKN-Hr-Ca6"/>
                             <constraint firstItem="6PB-rk-Qmn" firstAttribute="top" secondItem="40e-aU-Ky7" secondAttribute="bottom" constant="35" id="WYX-xX-0jh"/>
                             <constraint firstItem="SyY-sX-bqn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="Xeg-TN-MD4"/>
                             <constraint firstItem="6ny-4H-4HQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="ZWZ-97-ame"/>
@@ -79,12 +86,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3XX-rJ-phq" secondAttribute="trailing" constant="31" id="pLm-4m-suw"/>
                             <constraint firstItem="h2U-tb-deI" firstAttribute="top" secondItem="3XX-rJ-phq" secondAttribute="bottom" constant="88" id="w3D-nf-OhP"/>
                             <constraint firstItem="w3N-Fh-7g9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="xpO-Yd-8Rh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QqE-Uc-5iU" secondAttribute="trailing" constant="31" id="ybD-f2-dQ1"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350.7246376811595" y="-464.0625"/>
+            <point key="canvasLocation" x="1450.7246376811595" y="-464.0625"/>
         </scene>
         <!--MyDiary-->
         <scene sceneID="bb3-3M-pUR">
@@ -171,6 +179,10 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="addBtnPressed:" destination="8cJ-Ar-Ve3" eventType="touchUpInside" id="PCh-jB-olJ"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="9Td-e0-UPL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Diary Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OlY-VL-sTK">
                                 <rect key="frame" x="97" y="112" width="197" height="36"/>
@@ -218,6 +230,7 @@
     <resources>
         <image name="add" width="512" height="512"/>
         <image name="doc.text.fill" catalog="system" width="115" height="128"/>
+        <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
