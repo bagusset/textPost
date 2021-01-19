@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F58AA5125B71684000F7F2E /* LoadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F58AA5025B71684000F7F2E /* LoadTableViewCell.swift */; };
 		0F68FA8425B705680071CB4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F68FA8325B705680071CB4B /* GoogleService-Info.plist */; };
 		0F813C3E25B694E90033017D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F813C3D25B694E90033017D /* AppDelegate.swift */; };
 		0F813C4025B694E90033017D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F813C3F25B694E90033017D /* SceneDelegate.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F58AA5025B71684000F7F2E /* LoadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadTableViewCell.swift; sourceTree = "<group>"; };
 		0F68FA8325B705680071CB4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F813C3A25B694E90033017D /* textPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = textPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F813C3D25B694E90033017D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				0F813C7025B69D290033017D /* AddDiaryVC.swift */,
 				0F813C7525B69D3A0033017D /* SaveDiaryVC.swift */,
 				0F813C7A25B69D490033017D /* LoadDiaryVC.swift */,
+				0F58AA5025B71684000F7F2E /* LoadTableViewCell.swift */,
 				0F813C4625B694E90033017D /* Assets.xcassets */,
 				0F813C4825B694E90033017D /* LaunchScreen.storyboard */,
 				0F813C4B25B694E90033017D /* Info.plist */,
@@ -158,7 +161,6 @@
 				46C14C11502C48378F0B9DCD /* Pods-textPost.debug.xcconfig */,
 				9115A22244E2206E886CCC90 /* Pods-textPost.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -322,6 +324,7 @@
 				0F813C3E25B694E90033017D /* AppDelegate.swift in Sources */,
 				0F813C7625B69D3A0033017D /* SaveDiaryVC.swift in Sources */,
 				0F813C7125B69D290033017D /* AddDiaryVC.swift in Sources */,
+				0F58AA5125B71684000F7F2E /* LoadTableViewCell.swift in Sources */,
 				0F813C7B25B69D490033017D /* LoadDiaryVC.swift in Sources */,
 				0F813C4025B694E90033017D /* SceneDelegate.swift in Sources */,
 			);

@@ -119,7 +119,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="91" id="pce-Lk-n1L">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="91" id="pce-Lk-n1L" customClass="LoadTableViewCell" customModule="textPost" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pce-Lk-n1L" id="nH4-kp-CZq">
@@ -153,12 +153,22 @@
                                                 <constraint firstItem="hbU-l1-zpF" firstAttribute="top" secondItem="nH4-kp-CZq" secondAttribute="top" constant="8" id="UPU-jc-d09"/>
                                                 <constraint firstItem="hbU-l1-zpF" firstAttribute="leading" secondItem="nH4-kp-CZq" secondAttribute="leading" constant="20" symbolic="YES" id="WyF-N6-dWd"/>
                                                 <constraint firstAttribute="trailing" secondItem="1Xs-9j-ABG" secondAttribute="trailing" constant="20" id="cb4-Ex-L3q"/>
+                                                <constraint firstItem="1Xs-9j-ABG" firstAttribute="top" secondItem="cyZ-Th-aOK" secondAttribute="bottom" constant="8" symbolic="YES" id="epl-aP-XyR"/>
                                                 <constraint firstAttribute="bottom" secondItem="1Xs-9j-ABG" secondAttribute="bottom" constant="14" id="gTD-kS-eNh"/>
                                                 <constraint firstItem="1Xs-9j-ABG" firstAttribute="leading" secondItem="nH4-kp-CZq" secondAttribute="leading" constant="22" id="vyi-OR-9Uq"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="cyZ-Th-aOK" id="js5-jf-fsZ"/>
+                                            <outlet property="noteLabel" destination="1Xs-9j-ABG" id="Yyl-8b-ggh"/>
+                                            <outlet property="titleLabel" destination="hbU-l1-zpF" id="ezC-g2-592"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="7TP-2Z-XuA" id="jrn-8q-qiG"/>
+                                    <outlet property="delegate" destination="7TP-2Z-XuA" id="hAE-QV-dAL"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="REY-22-6Zy"/>
@@ -171,6 +181,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="MyDiary" image="doc.text" catalog="system" selectedImage="doc.text.fill" id="m6Z-zd-ENa"/>
+                    <connections>
+                        <outlet property="loadTableView" destination="gJY-4c-nbf" id="CA3-Lm-vjc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1XQ-oI-kez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
