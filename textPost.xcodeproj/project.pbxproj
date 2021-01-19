@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F68FA8425B705680071CB4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F68FA8325B705680071CB4B /* GoogleService-Info.plist */; };
 		0F813C3E25B694E90033017D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F813C3D25B694E90033017D /* AppDelegate.swift */; };
 		0F813C4025B694E90033017D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F813C3F25B694E90033017D /* SceneDelegate.swift */; };
 		0F813C4525B694E90033017D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F813C4325B694E90033017D /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F68FA8325B705680071CB4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F813C3A25B694E90033017D /* textPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = textPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F813C3D25B694E90033017D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F813C3F25B694E90033017D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		0F813C3C25B694E90033017D /* textPost */ = {
 			isa = PBXGroup;
 			children = (
+				0F68FA8325B705680071CB4B /* GoogleService-Info.plist */,
 				0F813C3D25B694E90033017D /* AppDelegate.swift */,
 				0F813C3F25B694E90033017D /* SceneDelegate.swift */,
 				0F813C4325B694E90033017D /* Main.storyboard */,
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F813C4A25B694E90033017D /* LaunchScreen.storyboard in Resources */,
+				0F68FA8425B705680071CB4B /* GoogleService-Info.plist in Resources */,
 				0F813C4725B694E90033017D /* Assets.xcassets in Resources */,
 				0F813C4525B694E90033017D /* Main.storyboard in Resources */,
 			);
