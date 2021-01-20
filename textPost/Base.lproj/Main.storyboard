@@ -52,6 +52,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-tb-deI">
                                 <rect key="frame" x="191" y="551" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWU-sQ-wc3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqE-Uc-5iU">
+                                <rect key="frame" x="354" y="44" width="29" height="31"/>
+                                <state key="normal" title=" " image="multiply.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="dismissBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A5y-Hm-nhm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -59,7 +69,9 @@
                         <constraints>
                             <constraint firstItem="h2U-tb-deI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="191" id="0kS-vv-d7Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6PB-rk-Qmn" secondAttribute="trailing" constant="346" id="0xC-eb-67v"/>
+                            <constraint firstItem="QqE-Uc-5iU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="25l-sK-uJe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6ny-4H-4HQ" secondAttribute="trailing" constant="350" id="2hQ-Ao-Sbe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QqE-Uc-5iU" secondAttribute="bottom" constant="787" id="3WD-zo-0Ft"/>
                             <constraint firstItem="SyY-sX-bqn" firstAttribute="top" secondItem="6ny-4H-4HQ" secondAttribute="bottom" constant="15" id="4u2-w4-m5t"/>
                             <constraint firstItem="40e-aU-Ky7" firstAttribute="top" secondItem="w3N-Fh-7g9" secondAttribute="bottom" constant="15" id="7ro-cd-ayX"/>
                             <constraint firstItem="40e-aU-Ky7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="BeU-q4-eLo"/>
@@ -70,6 +82,7 @@
                             <constraint firstItem="3XX-rJ-phq" firstAttribute="top" secondItem="6PB-rk-Qmn" secondAttribute="bottom" constant="15" id="JGi-Gy-UWK"/>
                             <constraint firstItem="w3N-Fh-7g9" firstAttribute="top" secondItem="SyY-sX-bqn" secondAttribute="bottom" constant="35" id="Mvt-wc-hTH"/>
                             <constraint firstItem="6ny-4H-4HQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="139" id="TxQ-ew-StS"/>
+                            <constraint firstItem="QqE-Uc-5iU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="354" id="UKN-Hr-Ca6"/>
                             <constraint firstItem="6PB-rk-Qmn" firstAttribute="top" secondItem="40e-aU-Ky7" secondAttribute="bottom" constant="35" id="WYX-xX-0jh"/>
                             <constraint firstItem="SyY-sX-bqn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="Xeg-TN-MD4"/>
                             <constraint firstItem="6ny-4H-4HQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="ZWZ-97-ame"/>
@@ -79,12 +92,20 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3XX-rJ-phq" secondAttribute="trailing" constant="31" id="pLm-4m-suw"/>
                             <constraint firstItem="h2U-tb-deI" firstAttribute="top" secondItem="3XX-rJ-phq" secondAttribute="bottom" constant="88" id="w3D-nf-OhP"/>
                             <constraint firstItem="w3N-Fh-7g9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="xpO-Yd-8Rh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QqE-Uc-5iU" secondAttribute="trailing" constant="31" id="ybD-f2-dQ1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dissmisBtn" destination="QqE-Uc-5iU" id="rWo-sq-87O"/>
+                        <outlet property="inputDateTextField" destination="40e-aU-Ky7" id="RMj-T9-BHp"/>
+                        <outlet property="inputNoteTextfield" destination="3XX-rJ-phq" id="gbk-aM-hCt"/>
+                        <outlet property="inputTittleTextField" destination="SyY-sX-bqn" id="R3T-Ou-2wo"/>
+                        <outlet property="saveBtn" destination="h2U-tb-deI" id="Gt9-Bj-xPB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350.7246376811595" y="-464.0625"/>
+            <point key="canvasLocation" x="1450.7246376811595" y="-464.0625"/>
         </scene>
         <!--MyDiary-->
         <scene sceneID="bb3-3M-pUR">
@@ -98,7 +119,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="91" id="pce-Lk-n1L">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="91" id="pce-Lk-n1L" customClass="LoadTableViewCell" customModule="textPost" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pce-Lk-n1L" id="nH4-kp-CZq">
@@ -132,12 +153,22 @@
                                                 <constraint firstItem="hbU-l1-zpF" firstAttribute="top" secondItem="nH4-kp-CZq" secondAttribute="top" constant="8" id="UPU-jc-d09"/>
                                                 <constraint firstItem="hbU-l1-zpF" firstAttribute="leading" secondItem="nH4-kp-CZq" secondAttribute="leading" constant="20" symbolic="YES" id="WyF-N6-dWd"/>
                                                 <constraint firstAttribute="trailing" secondItem="1Xs-9j-ABG" secondAttribute="trailing" constant="20" id="cb4-Ex-L3q"/>
+                                                <constraint firstItem="1Xs-9j-ABG" firstAttribute="top" secondItem="cyZ-Th-aOK" secondAttribute="bottom" constant="8" symbolic="YES" id="epl-aP-XyR"/>
                                                 <constraint firstAttribute="bottom" secondItem="1Xs-9j-ABG" secondAttribute="bottom" constant="14" id="gTD-kS-eNh"/>
                                                 <constraint firstItem="1Xs-9j-ABG" firstAttribute="leading" secondItem="nH4-kp-CZq" secondAttribute="leading" constant="22" id="vyi-OR-9Uq"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="cyZ-Th-aOK" id="js5-jf-fsZ"/>
+                                            <outlet property="noteLabel" destination="1Xs-9j-ABG" id="Yyl-8b-ggh"/>
+                                            <outlet property="titleLabel" destination="hbU-l1-zpF" id="ezC-g2-592"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="7TP-2Z-XuA" id="jrn-8q-qiG"/>
+                                    <outlet property="delegate" destination="7TP-2Z-XuA" id="hAE-QV-dAL"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="REY-22-6Zy"/>
@@ -149,7 +180,10 @@
                             <constraint firstItem="gJY-4c-nbf" firstAttribute="top" secondItem="REY-22-6Zy" secondAttribute="top" id="rJo-Do-ER1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MyDiary" selectedImage="doc.text.fill" catalog="system" id="m6Z-zd-ENa"/>
+                    <tabBarItem key="tabBarItem" title="MyDiary" image="doc.text" catalog="system" selectedImage="doc.text.fill" id="m6Z-zd-ENa"/>
+                    <connections>
+                        <outlet property="loadTableView" destination="gJY-4c-nbf" id="CA3-Lm-vjc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1XQ-oI-kez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,6 +205,10 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="addBtnPressed:" destination="8cJ-Ar-Ve3" eventType="touchUpInside" id="PCh-jB-olJ"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="9Td-e0-UPL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Diary Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OlY-VL-sTK">
                                 <rect key="frame" x="97" y="112" width="197" height="36"/>
@@ -190,7 +228,7 @@
                             <constraint firstItem="1HL-Wd-gP5" firstAttribute="centerY" secondItem="eBm-W8-EDd" secondAttribute="centerY" id="u79-WQ-ylS"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add" selectedImage="square.and.pencil" catalog="system" id="N1m-dr-4Oe"/>
+                    <tabBarItem key="tabBarItem" title="Add" image="square.and.pencil" catalog="system" selectedImage="square.and.pencil" id="N1m-dr-4Oe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcR-BI-lki" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,7 +255,9 @@
     </scenes>
     <resources>
         <image name="add" width="512" height="512"/>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="doc.text.fill" catalog="system" width="115" height="128"/>
+        <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
