@@ -26,7 +26,9 @@ class SaveDiaryVC: UIViewController, UITextViewDelegate {
         ref = Database.database().reference()
         createDatePicker()
         configureUITextView()
+        configureBtn()
         noteTextView.delegate = self
+
         
 
     }
@@ -89,6 +91,14 @@ class SaveDiaryVC: UIViewController, UITextViewDelegate {
             noteTextView.text = "Write your note today !"
             noteTextView.textColor = UIColor.lightGray
         }
+    }
+    
+    func configureBtn(){
+        saveBtn.backgroundColor = #colorLiteral(red: 0, green: 0.886972487, blue: 0.1316010654, alpha: 1)
+        saveBtn.layer.cornerRadius = 10
+        saveBtn.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        dissmisBtn.tintColor = #colorLiteral(red: 0.007044891827, green: 0.885907352, blue: 0.1369796097, alpha: 1)
     }
 
 }
