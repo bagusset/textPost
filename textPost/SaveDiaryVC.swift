@@ -8,17 +8,16 @@
 import UIKit
 import Firebase
 
-class SaveDiaryVC: UIViewController {
+class SaveDiaryVC: UIViewController, UITextViewDelegate {
     
     var ref : DatabaseReference!
     let datePicker = UIDatePicker()
     
     @IBOutlet weak var inputTittleTextField: UITextField!
     @IBOutlet weak var inputDateTextField: UITextField!
-    @IBOutlet weak var inputNoteTextfield: UITextField!
+    @IBOutlet weak var noteTextView: UITextView!
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var dissmisBtn: UIButton!
-    
    
 
     override func viewDidLoad() {
@@ -26,6 +25,9 @@ class SaveDiaryVC: UIViewController {
         
         ref = Database.database().reference()
         createDatePicker()
+        configureUITextView()
+        noteTextView.delegate = self
+        
 
     }
     
@@ -38,7 +40,7 @@ class SaveDiaryVC: UIViewController {
     
     @IBAction func saveBtnPressed(_ sender: UIButton) {
         
-        ref?.child("Notes").childByAutoId().setValue([ "Dates" : inputDateTextField.text, "Note" : inputNoteTextfield.text, "Titles" : inputTittleTextField.text])
+        ref?.child("Notes").childByAutoId().setValue([ "Dates" : inputDateTextField.text, "Note" : noteTextView.text, "Titles" : inputTittleTextField.text])
         
     }
     
@@ -65,6 +67,28 @@ class SaveDiaryVC: UIViewController {
         self.view.endEditing(true)
     }
     
+    func configureUITextView(){
+
+        noteTextView.text = "Write your note today !"
+        noteTextView.textColor = UIColor.lightGray
+
+        self.noteTextView.layer.borderWidth = 1.0
+        self.noteTextView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        self.noteTextView.layer.cornerRadius = 10
+    }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if noteTextView.textColor == UIColor.lightGray{
+            noteTextView.text = nil
+            noteTextView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if noteTextView.text.isEmpty {
+            noteTextView.text = "Write your note today !"
+            noteTextView.textColor = UIColor.lightGray
+        }
+    }
 
 }

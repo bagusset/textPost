@@ -16,11 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3XX-rJ-phq">
-                                <rect key="frame" x="31" y="429" width="352" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SyY-sX-bqn">
                                 <rect key="frame" x="31" y="219" width="352" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -49,13 +44,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-tb-deI">
-                                <rect key="frame" x="191" y="551" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWU-sQ-wc3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqE-Uc-5iU">
                                 <rect key="frame" x="354" y="44" width="29" height="31"/>
                                 <state key="normal" title=" " image="multiply.circle.fill" catalog="system"/>
@@ -63,11 +51,28 @@
                                     <action selector="dismissBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A5y-Hm-nhm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-tb-deI">
+                                <rect key="frame" x="190" y="642" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWU-sQ-wc3"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pth-fS-gnT">
+                                <rect key="frame" x="31" y="430" width="352" height="192"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="ad9-R6-BQq"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="h2U-tb-deI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="191" id="0kS-vv-d7Z"/>
+                            <constraint firstItem="h2U-tb-deI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="190" id="0kS-vv-d7Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6PB-rk-Qmn" secondAttribute="trailing" constant="346" id="0xC-eb-67v"/>
                             <constraint firstItem="QqE-Uc-5iU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="25l-sK-uJe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6ny-4H-4HQ" secondAttribute="trailing" constant="350" id="2hQ-Ao-Sbe"/>
@@ -78,19 +83,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SyY-sX-bqn" secondAttribute="trailing" constant="31" id="CdG-kg-J29"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w3N-Fh-7g9" secondAttribute="trailing" constant="347" id="CsB-tV-epc"/>
                             <constraint firstItem="6PB-rk-Qmn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="FUY-FU-iC7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h2U-tb-deI" secondAttribute="bottom" constant="281" id="G9r-I4-wm1"/>
-                            <constraint firstItem="3XX-rJ-phq" firstAttribute="top" secondItem="6PB-rk-Qmn" secondAttribute="bottom" constant="15" id="JGi-Gy-UWK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h2U-tb-deI" secondAttribute="bottom" constant="190" id="G9r-I4-wm1"/>
+                            <constraint firstItem="pth-fS-gnT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="HVT-Ub-r3l"/>
                             <constraint firstItem="w3N-Fh-7g9" firstAttribute="top" secondItem="SyY-sX-bqn" secondAttribute="bottom" constant="35" id="Mvt-wc-hTH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pth-fS-gnT" secondAttribute="trailing" constant="31" id="RXn-gg-fDn"/>
                             <constraint firstItem="6ny-4H-4HQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="139" id="TxQ-ew-StS"/>
                             <constraint firstItem="QqE-Uc-5iU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="354" id="UKN-Hr-Ca6"/>
                             <constraint firstItem="6PB-rk-Qmn" firstAttribute="top" secondItem="40e-aU-Ky7" secondAttribute="bottom" constant="35" id="WYX-xX-0jh"/>
                             <constraint firstItem="SyY-sX-bqn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="Xeg-TN-MD4"/>
                             <constraint firstItem="6ny-4H-4HQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="ZWZ-97-ame"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h2U-tb-deI" secondAttribute="trailing" constant="189" id="aa0-Vu-t8R"/>
-                            <constraint firstItem="3XX-rJ-phq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="joz-He-bgc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h2U-tb-deI" secondAttribute="trailing" constant="190" id="aa0-Vu-t8R"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="40e-aU-Ky7" secondAttribute="trailing" constant="31" id="nVv-Qq-yr3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3XX-rJ-phq" secondAttribute="trailing" constant="31" id="pLm-4m-suw"/>
-                            <constraint firstItem="h2U-tb-deI" firstAttribute="top" secondItem="3XX-rJ-phq" secondAttribute="bottom" constant="88" id="w3D-nf-OhP"/>
+                            <constraint firstItem="pth-fS-gnT" firstAttribute="top" secondItem="6PB-rk-Qmn" secondAttribute="bottom" constant="16" id="sjV-BI-R3Y"/>
                             <constraint firstItem="w3N-Fh-7g9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="xpO-Yd-8Rh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QqE-Uc-5iU" secondAttribute="trailing" constant="31" id="ybD-f2-dQ1"/>
                         </constraints>
@@ -98,8 +102,8 @@
                     <connections>
                         <outlet property="dissmisBtn" destination="QqE-Uc-5iU" id="rWo-sq-87O"/>
                         <outlet property="inputDateTextField" destination="40e-aU-Ky7" id="RMj-T9-BHp"/>
-                        <outlet property="inputNoteTextfield" destination="3XX-rJ-phq" id="gbk-aM-hCt"/>
                         <outlet property="inputTittleTextField" destination="SyY-sX-bqn" id="R3T-Ou-2wo"/>
+                        <outlet property="noteTextView" destination="pth-fS-gnT" id="vC6-I1-S2d"/>
                         <outlet property="saveBtn" destination="h2U-tb-deI" id="Gt9-Bj-xPB"/>
                     </connections>
                 </viewController>
@@ -259,6 +263,9 @@
         <image name="doc.text.fill" catalog="system" width="115" height="128"/>
         <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
